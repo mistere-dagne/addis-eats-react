@@ -4,13 +4,13 @@ import Card from "./Card.jsx";
 
 
 
-function Menu(){
+function Menu({category}){
 
-    const category="Main"; //temporarly 
+    // const category="Main"; //temporarly 
 
-    const shown = menu.filter(
+    const shown = category? menu.filter(
         (dish) => dish.category === category
-    );
+    ): menu;
 
     if (shown.length === 0) {
     return (
@@ -20,6 +20,7 @@ function Menu(){
       </section>
     );
     }
+
 
 
   return(
