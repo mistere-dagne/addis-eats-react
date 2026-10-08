@@ -10,7 +10,8 @@ function Dish ({name,price, currency= "ETB", spicy=false}){  //destructuring
             <h3>{name} {spicy && <span>Spicy</span>}</h3>
             <p>{price} {currency} </p>
             <button onClick={()=>setCount(count+1)} >Add</button>
-            <p>{count}</p>
+            <span> {count}</span>
+            
             
         </div>
     );

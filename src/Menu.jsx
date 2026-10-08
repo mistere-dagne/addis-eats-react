@@ -1,16 +1,18 @@
 import Dish from "./Dish.jsx";
 import menu from "./data.js";
 import Card from "./Card.jsx";
+import {useState} from "react";
+import CategoryBar from "./CategoryBar.jsx";
+import DishList from "./DishList.jsx";
 
 
 
-function Menu({category}){
+function Menu(){
+  
+   const [category,setCategory]= useState("All");
 
-    // const category="Main"; //temporarly 
-
-    const shown = category? menu.filter(
-        (dish) => dish.category === category
-    ): menu;
+   const shown = category ==="All"?
+   menu : menu.filter( (dish) => dish.category === category);
 
     if (shown.length === 0) {
     return (
@@ -22,21 +24,18 @@ function Menu({category}){
     }
 
 
-
   return(
     <section>
     <h2>Our Menu</h2>
 
-    { shown.map (
-        (dish) => (
-            <Card key={dish.id}>
-                <Dish name={dish.name}
-                price={dish.price}
-                spicy={dish.spicy}
-                />
-            </Card>
-        ) // made into array of components 
-    )} 
+    <CategoryBar
+      selected={category}
+      onSelect={setCategory}
+    />
+
+    <DishList
+      dishes={shown} />
+
     </section>
   );
 }

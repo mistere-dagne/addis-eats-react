@@ -28,3 +28,7 @@ footer {
   }
 }
 
+.selected {
+    background-color: rgb(238, 181, 97);
+}
+
