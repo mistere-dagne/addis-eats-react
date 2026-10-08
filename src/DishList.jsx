@@ -1,7 +1,7 @@
 import Dish from "./Dish.jsx";
 import Card from "./Card.jsx";
 
-function DishList({dishes}){
+function DishList({dishes, onAdd}){
     if (dishes.length === 0){
         return(
             <p>No Dishes in this category yet. </p>
@@ -16,6 +16,7 @@ function DishList({dishes}){
                     name={dish.name}
                     price={dish.price}
                     spicy={dish.spicy}
+                    onAdd={onAdd}
                 />
             </Card>
         ) 
