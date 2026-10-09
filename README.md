@@ -12,7 +12,12 @@ A simple React food-ordering website.
 - Conditional rendering
 - children prop
 - Filtered menu
-- 
+- React state with useState
+- Event handling
+- Controlled inputs
+- Lifting state up
+- Form submission handling
+- Input validation
 
 
 ## Built With
