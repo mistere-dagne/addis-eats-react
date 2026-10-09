@@ -4,7 +4,7 @@ import menu from "./data.js";
 import {useState} from "react";
 import CategoryBar from "./CategoryBar.jsx";
 import DishList from "./DishList.jsx";
-
+import OrderForm from "./OrderForm.jsx";
 
 
 function Menu(){
@@ -37,6 +37,8 @@ function Menu(){
       />
 
     <p>Order total: {total} ETB</p>
+
+    <OrderForm/>
 
     </section>
   );
