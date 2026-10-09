@@ -29,6 +29,8 @@ function OrderForm(){
         })
     }
 
+    const valid= /^(?:\+251|0)9\d{8}$/.test(form.phone);
+
     return(
         <form onSubmit={handleSubmit}>
             <h3>Delivery Info</h3>
@@ -40,7 +42,7 @@ function OrderForm(){
             value={form.name} 
             onChange={handleChange} />
 
-            
+
             <label htmlFor="phone">Phone</label>
             <input 
             id="phone"
@@ -55,7 +57,11 @@ function OrderForm(){
             value={form.area} 
             onChange={handleChange} />
 
-            <button type="submit">Submit Order</button>
+            {form.phone && !valid && (
+             <p className="err">Use 09... or +2519...</p>
+            )}
+
+            <button type="submit" disabled={!valid}>Pay with Teebirr</button>
 
         </form>
     )
