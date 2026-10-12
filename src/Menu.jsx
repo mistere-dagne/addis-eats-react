@@ -16,6 +16,8 @@ function Menu(){
    const [total, setTotal]= useState(0);
 
    const [dishes, setDishes] = useState([]);
+   const [loading, setLoading] = useState(true);
+   const [error, setError] = useState(null);
   
 
    function addToOrder(price){
@@ -27,12 +29,38 @@ function Menu(){
   
   useEffect(()=> {
       async function load(){
-        const result = await loadDishes("All");
-        setDishes(result);
+        try{
+          setLoading(true);
+          setError(null);
+
+          const result = await loadDishes("All");
+          setDishes(result);
+        } catch (e){
+          setError(e.message);
+        } finally{
+          setLoading(false);
+        }
     }
     load();
   }, []
   );
+
+  if (loading){
+    return(
+      <p>Loading menu ...</p>
+    )
+  }
+  if (error) {
+    return(
+      <p className="err">{error}</p>
+    )
+  }
+
+  if (dishes.length === 0){
+    return(
+      <p>No dishes yet</p>
+    )
+  }
 
   return(
     <section>
