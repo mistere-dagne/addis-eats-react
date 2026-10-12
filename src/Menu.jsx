@@ -33,7 +33,7 @@ function Menu(){
           setLoading(true);
           setError(null);
 
-          const result = await loadDishes("All");
+          const result = await loadDishes(category);
           setDishes(result);
         } catch (e){
           setError(e.message);
@@ -42,7 +42,7 @@ function Menu(){
         }
     }
     load();
-  }, []
+  }, [category]
   );
 
   if (loading){
