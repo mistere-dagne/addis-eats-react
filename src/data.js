@@ -1,75 +1,75 @@
-const menu= [
-    {
-        id: 1,
-        name: "Buna",
-        price: 120,
-        category: "Drink",
-        spicy: false
-    },
-     {
-        id: 2,
-        name: "Shiro",
-        price: 90,
-        category: "Main",
-        spicy: false
-    },
-    {
-        id: 3,
-        name: "Tibs",
-        price: 100,
-        category: "Main",
-        spicy: false
-    },
-    {
-        id: 4,
-        name: "Tej",
-        price: 60,
-        category: "Drink",
-        spicy: false
-    },
-    {
-        id: 5,
-        name: "Agelgel",
-        price: 150,
-        category: "Main",
-        spicy: true
-    },
-    {
-        id: 6,
-        name: "Tella",
-        price: 40,
-        category: "Drink",
-        spicy: false
-    },
-    {
-        id: 7,
-        name: "Kitfo",
-        price: 120,
-        category: "Main",
-        spicy: false
-    },
-    {
-        id: 8,
-        name: "Genfo",
-        price: 80,
-        category: "Breakfast",
-        spicy: false
-    },
-    {
-        id: 9,
-        name: "Sambusa",
-        price: 20,
-        category: "Starter",
-        spicy: true
-    },
-    {
-        id: 10,
-        name: "Shorba",
-        price: 15,
-        category: "Starter",
-        spicy: false
-    }
+// const menu= [
+//     {
+//         id: 1,
+//         name: "Buna",
+//         price: 120,
+//         category: "Drink",
+//         spicy: false
+//     },
+//      {
+//         id: 2,
+//         name: "Shiro",
+//         price: 90,
+//         category: "Main",
+//         spicy: false
+//     },
+//     {
+//         id: 3,
+//         name: "Tibs",
+//         price: 100,
+//         category: "Main",
+//         spicy: false
+//     },
+//     {
+//         id: 4,
+//         name: "Tej",
+//         price: 60,
+//         category: "Drink",
+//         spicy: false
+//     },
+//     {
+//         id: 5,
+//         name: "Agelgel",
+//         price: 150,
+//         category: "Main",
+//         spicy: true
+//     },
+//     {
+//         id: 6,
+//         name: "Tella",
+//         price: 40,
+//         category: "Drink",
+//         spicy: false
+//     },
+//     {
+//         id: 7,
+//         name: "Kitfo",
+//         price: 120,
+//         category: "Main",
+//         spicy: false
+//     },
+//     {
+//         id: 8,
+//         name: "Genfo",
+//         price: 80,
+//         category: "Breakfast",
+//         spicy: false
+//     },
+//     {
+//         id: 9,
+//         name: "Sambusa",
+//         price: 20,
+//         category: "Starter",
+//         spicy: true
+//     },
+//     {
+//         id: 10,
+//         name: "Shorba",
+//         price: 15,
+//         category: "Starter",
+//         spicy: false
+//     }
 
-];
+// ];
 
-export default menu;
+// export default menu;
