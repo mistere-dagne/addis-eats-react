@@ -18,6 +18,11 @@ A simple React food-ordering website.
 - Lifting state up
 - Form submission handling
 - Input validation
+- Data fetching with useEffect
+- Loading and error states
+- Request cancellation with AbortController
+- Input focus with useRef
+- Menu search
 
 
 ## Built With

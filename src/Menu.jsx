@@ -1,6 +1,4 @@
-//import Dish from "./Dish.jsx";
-//import menu from "./data.js";
-//import Card from "./Card.jsx";
+
 import {useState} from "react";
 import CategoryBar from "./CategoryBar.jsx";
 import DishList from "./DishList.jsx";
@@ -21,18 +19,17 @@ function Menu(){
    const [error, setError] = useState(null);
 
    const [search, setSearch] = useState("")
+   
    const searchRef = useRef(null)
+   
    const filteredDishes = dishes.filter((dish) =>
     dish.name.toLowerCase().includes(search.toLowerCase())
     );
-  
+    
 
    function addToOrder(price){
     setTotal(total + price) ;
    }
-
-  //  const shown = category ==="All"?
-  //  menu : menu.filter( (dish) => dish.category === category);
   
   useEffect(()=> {
     const ctrl = new AbortController();
@@ -77,12 +74,6 @@ function Menu(){
     )
   }
 
-  if (dishes.length === 0){
-    return(
-      <p>No dishes yet</p>
-    )
-  }
-
   return(
     <section>
     <h2>Our Menu</h2>
@@ -107,7 +98,6 @@ function Menu(){
       <p>No dishes match your search.</p>
     ) : (
     <DishList
-      // dishes={shown}
       dishes={filteredDishes}
       onAdd={addToOrder}
       />
